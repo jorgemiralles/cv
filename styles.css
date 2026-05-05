@@ -1,0 +1,258 @@
+:root {
+    /* Paleta de colores moderna */
+    --primary-color: #2563eb;
+    --sidebar-bg: #1e293b;
+    --sidebar-text: #f8fafc;
+    --bg-color: #f1f5f9;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Contenedor principal */
+.cv-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+    flex: 0 0 320px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.profile-section {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    background-color: #475569; /* Placeholder color */
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid var(--primary-color);
+    /* Descomenta la siguiente línea y añade tu URL para poner tu foto */
+    /* background-image: url('tu-foto.jpg'); background-size: cover; */
+}
+
+.profile-section h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.job-title {
+    color: #93c5fd;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-section ul,
+.languages-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-section li {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-tag {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.about-section p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Línea de tiempo para Experiencia y Educación */
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    flex: 0 0 150px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-top: 0.2rem;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-color);
+    position: relative;
+}
+
+/* Punto de la línea de tiempo */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--white);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content h4 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.timeline-content ul {
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+}
+
+.timeline-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: var(--text-muted);
+}
+
+/* --- RESPONSIVE DESIGN (Móviles y Tablets) --- */
+@media (max-width: 850px) {
+    body {
+        padding: 1rem;
+    }
+
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: auto;
+        padding: 2rem;
+    }
+
+    .main-content {
+        padding: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-date {
+        flex: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+}
