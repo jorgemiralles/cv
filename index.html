@@ -3,57 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Curriculum Vitae</title>
+    <title>Jorge Miralles - Curriculum Vitae</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cv-container">
-        <!-- Barra lateral -->
-        <aside class="sidebar">
-            <div class="profile-section">
-                <!-- Puedes cambiar el src por tu propia foto -->
-                <div class="profile-pic"></div>
-                <h1>Jorge Miralles</h1>
-                <h2 class="job-title">Desarrollador Web / Profesión</h2>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="profile-pic"></div>
+            <h1>Jorge Miralles</h1>
+            <h2 class="job-title">Desarrollador Web / Profesión</h2>
+            <div class="contact-bar">
+                <span>📞 +34 123 456 789</span>
+                <span>✉️ jorgemiralles@gmail.com</span>
+                <span>📍 Barcelona, España</span>
+                <span>🔗 linkedin.com/in/tu-perfil</span>
+                <span>💻 github.com/tu-usuario</span>
             </div>
+        </header>
 
-            <div class="contact-section">
-                <h3>Contacto</h3>
-                <ul>
-                    <li>📞 +34 123 456 789</li>
-                    <li>✉️ jorgemiralles@gmail.com</li>
-                    <li>📍 Barcelona, España</li>
-                    <li>🔗 linkedin.com/in/tu-perfil</li>
-                    <li>💻 github.com/tu-usuario</li>
-                </ul>
-            </div>
-
-            <div class="skills-section">
-                <h3>Habilidades</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Diseño UI/UX</span>
-                </div>
-            </div>
-
-            <div class="languages-section">
-                <h3>Idiomas</h3>
-                <ul>
-                    <li><strong>Español:</strong> Nativo</li>
-                    <li><strong>Inglés:</strong> B2 - Intermedio Alto</li>
-                    <li><strong>Catalán:</strong> Básico</li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- Contenido principal -->
+        <!-- Main Content -->
         <main class="main-content">
-            <section class="about-section">
+            <!-- Sobre mí -->
+            <section class="section-card about-section">
                 <h2 class="section-title">Sobre mí</h2>
                 <p>
                     Profesional apasionado con más de [X] años de experiencia en el sector. 
@@ -63,7 +36,8 @@
                 </p>
             </section>
 
-            <section class="experience-section">
+            <!-- Experiencia Laboral -->
+            <section class="section-card experience-section">
                 <h2 class="section-title">Experiencia Laboral</h2>
                 
                 <div class="timeline-item">
@@ -93,7 +67,8 @@
                 </div>
             </section>
 
-            <section class="education-section">
+            <!-- Educación -->
+            <section class="section-card education-section">
                 <h2 class="section-title">Educación</h2>
                 
                 <div class="timeline-item">
@@ -113,6 +88,75 @@
                         <p>Programa intensivo de 500+ horas especializado en tecnologías modernas (MERN stack).</p>
                     </div>
                 </div>
+            </section>
+
+            <!-- Habilidades -->
+            <section class="section-card skills-section">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Diseño UI/UX</span>
+                </div>
+            </section>
+
+            <!-- Proyectos -->
+            <section class="section-card projects-section">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>E-commerce Platform</h3>
+                        <h4>React, Node.js, MongoDB</h4>
+                        <p>Plataforma de comercio electrónico con carrito de compras, pasarela de pagos y panel de administración.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Demo</a>
+                            <a href="#" class="btn-link">Código</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Task Manager App</h3>
+                        <h4>Vue.js, Firebase</h4>
+                        <p>Aplicación de gestión de tareas con funcionalidades de arrastrar y soltar, notificaciones y sincronización en tiempo real.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Demo</a>
+                            <a href="#" class="btn-link">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificaciones -->
+            <section class="section-card certifications-section">
+                <h2 class="section-title">Certificaciones</h2>
+                <div class="certification-list">
+                    <div class="certification-item">
+                        <div>
+                            <h3>AWS Certified Developer</h3>
+                            <h4>Amazon Web Services</h4>
+                        </div>
+                        <span class="cert-date">2023</span>
+                    </div>
+                    <div class="certification-item">
+                        <div>
+                            <h3>Professional Scrum Master</h3>
+                            <h4>Scrum.org</h4>
+                        </div>
+                        <span class="cert-date">2022</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Idiomas -->
+            <section class="section-card languages-section">
+                <h2 class="section-title">Idiomas</h2>
+                <ul>
+                    <li><strong>Español:</strong> Nativo</li>
+                    <li><strong>Inglés:</strong> B2 - Intermedio Alto</li>
+                    <li><strong>Catalán:</strong> Básico</li>
+                </ul>
             </section>
         </main>
     </div>
